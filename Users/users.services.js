@@ -29,7 +29,7 @@ const getUserById = (req, res) => {
     res.status(200).json(dataName)
   } else {
     // Error
-    res.status(404).json({ message: "The ID has been deleted ot doesn't exits" });
+    res.status(404).json({ message: "The ID has been deleted or doesn't exits" });
   }
 };
 
@@ -129,7 +129,7 @@ if (data) {
   res.status(200).json({message: `ID #${id} succesfully deleted`});
 } else {
   // Error
-  res.status(404).json({ message: "The ID has been deleted ot doesn't exist" });
+  res.status(404).json({ message: "The ID has been deleted or doesn't exist" });
 }
 
 }
