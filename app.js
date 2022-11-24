@@ -5,7 +5,7 @@ const express = require('express')
 const usersRouter = require('./users/users.router')
 
 // Initial Config
-const port = 9002
+const port = 9000
 const app = express()
 
 // Json request available
