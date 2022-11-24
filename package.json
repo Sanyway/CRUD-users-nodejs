@@ -1,0 +1,25 @@
+{
+  "name": "userscrud",
+  "version": "1.0.0",
+  "description": "Project users CRUD",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "crud",
+    "users",
+    "project",
+    "academlo"
+  ],
+  "author": "Sanyway",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
