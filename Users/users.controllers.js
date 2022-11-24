@@ -1,4 +1,4 @@
-const usersDB = []
+let usersDB = []
 let id = 1
 
 
@@ -58,19 +58,26 @@ const addSingleUser = (obj, id) => {
 }
 
 
-const deleteUserById = (id) => {
-    let position = id - 1
-    if(usersDB[position] && usersDB[position] !== 'undefined' ){
-    usersDB.splice(position, 1, 'undefined')
-    if (id <= usersDB.length && id > 0) {
-        
-        return 1   
-    }
-}  else {
-        return ''
-    }
+const deleteUserById = (idUser) => {
+
+    for (let i = 1; i <= usersDB.length; i++) {
+        if (!i)
+            return ''
+
+        // Delete user by ID or Name
+        if (usersDB[i - 1].id == idUser || usersDB[i - 1]['first_name'] == idUser) {
+            let position = i -1
 
 
+            if (usersDB[position] && usersDB[position] !== 'undefined') {
+                usersDB.splice(position, 1, 'undefined')
+                if (i <= usersDB.length && i > 0) {
+
+                    return 1
+                }
+            }
+        }
+    }
 }
 module.exports = {
     findAllUsers,

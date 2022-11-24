@@ -120,13 +120,13 @@ const addUserById = (req, res) => {
 };
 
 const deleteUser = (req, res) => {
-  const id = req.params.id
-const data = userControllers.deleteUserById(id)
+  const idUser = req.params.id
+const data = userControllers.deleteUserById(idUser)
 
 if (data) {
   // Success
-  // Delete user by Id
-  res.status(200).json({message: `ID #${id} succesfully deleted`});
+  // Delete user by Id or Name
+  res.status(200).json({message: `ID #${idUser} succesfully deleted`});
 } else {
   // Error
   res.status(404).json({ message: "The ID has been deleted or doesn't exist" });
