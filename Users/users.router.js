@@ -10,5 +10,9 @@ router.get('/users/random', userServices.getRandomUser)
 
 router.get('/users/:id', userServices.getUserById)
 
+router.put('/users/:id', userServices.addUserById)
+
+router.delete('/users/:id', userServices.deleteUser)
+
 module.exports = router
 
