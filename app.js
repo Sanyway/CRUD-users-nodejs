@@ -1,4 +1,4 @@
-// Dep
+// Dependencies 
 const express = require('express')
 
 // Routers
